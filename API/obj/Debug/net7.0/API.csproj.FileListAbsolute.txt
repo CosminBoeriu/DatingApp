@@ -61,3 +61,5 @@
 /home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/runtimes/win-arm64/native/e_sqlite3.dll
 /home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/runtimes/win-x64/native/e_sqlite3.dll
 /home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/runtimes/win-x86/native/e_sqlite3.dll
+/home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/package-lock.json
+/home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/package.json
