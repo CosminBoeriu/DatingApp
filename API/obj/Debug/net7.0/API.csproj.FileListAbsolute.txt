@@ -63,3 +63,11 @@
 /home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/runtimes/win-x86/native/e_sqlite3.dll
 /home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/package-lock.json
 /home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/package.json
+/home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
+/home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll
+/home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
+/home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
