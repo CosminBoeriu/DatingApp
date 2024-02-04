@@ -1,0 +1,64 @@
+<div class="row" *ngIf="member">
+  <div class="col-4">
+    <h1>Your profile</h1>
+  </div>
+  <div class="col-8">
+    <div class="alert alert-info" *ngIf="editForm.dirty">
+      <p>Informations: You have made changes that will be lost if not saved !</p>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card">
+      <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.userName}}" class="card-img-top img-thumbnail">
+      <div class="card-body">
+        <div>
+          <strong>Location: </strong>
+          <p>{{member.adress}}</p>
+        </div>
+        <div>
+          <strong>Age: </strong>
+          <p>{{member.age}}</p>
+        </div>
+        <div>
+          <strong>Last seen online: </strong>
+          <p>{{member.lastActive}}</p>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button type="submit"
+                [disabled]="!editForm.dirty" form="editForm"
+                class="btn btn-success col-12"
+                >Save</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-8">
+    <tabset class="member-tabs">
+      <form #editForm="ngForm" id="editForm" (ngSubmit)="updateMember()">
+        <h4 class="mb-2 mt-2">Description</h4>
+        <textarea
+          class="form-control" [(ngModel)]="member.description"
+          name="description"
+        rows="6"></textarea>
+        <h4 class="mb-2 mt-2">Address details:</h4>
+        <div class="d-felx flex-row align-items-center">
+          <label for="city">City: </label>
+          <input type="text" [(ngModel)]="this.city" name="city" class="form-control mx-2" autocomplete="off">
+          <label for="country">Country: </label>
+          <input type="text" [(ngModel)]="this.country" name="city" class="form-control mx-2" autocomplete="off">
+        </div>
+        <h4 class="mb-2 mt-2">Profile picture:</h4>
+        <div class="d-felx flex-row align-items-center">
+          <label for="profilePic">Picture Url: </label>
+          <input type="text" (ngModel)="member.photoUrl" name="city" class="form-control mx-2" autocomplete="off">
+        </div>
+      </form>
+      <tab heading="About {{member.userName}}">
+
+      </tab>
+      <tab heading="Messages">
+        <h4 class="mt-2">Messages will go here</h4>
+      </tab>
+    </tabset>
+  </div>
+</div>

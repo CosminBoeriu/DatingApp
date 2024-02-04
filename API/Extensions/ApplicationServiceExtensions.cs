@@ -20,7 +20,8 @@ public static class ApplicationServiceExtensions
         services.AddScoped<UserRepository>();
         services.AddScoped<AccountRepository>();
         services.AddScoped<ITokenService, TokenService>();  //Am putea include si doar TokenService, nu am inteles diferenta
-
+        services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+        
         return services;
     }
 }

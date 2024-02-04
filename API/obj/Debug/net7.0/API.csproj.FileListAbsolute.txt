@@ -71,3 +71,6 @@
 /home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
 /home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/Data/UserSeedFile.json
+/home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/AutoMapper.dll
+/home/cosmin/Informatica/Anul 2/NET/Dating App/API/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll

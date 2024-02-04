@@ -9,17 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent {
   registerMode = false;
   users: any;
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
-  ngOnInit(){
-    this.getUsers();
-  }
-  getUsers(): void {
-    this.http.get('https://localhost:5001/api/users').subscribe({
-      next: response => this.users = response,
-      error: error => console.log(error),
-      complete: () => console.log('Request Completed')
-    });
+  ngOnInit() {
   }
 
   registerToggle(){
