@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers;
 
-[Authorize]
+[AllowAnonymous]
 public class UsersController : BaseApiController
 {
     private readonly UserRepository _userRepository;
@@ -42,9 +42,9 @@ public class UsersController : BaseApiController
     [HttpPut]
     public async Task<ActionResult> UpdateUser(MemberUpdateDTO memberUpdateDto)
     {
-        var username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-        var user = await _userRepository.GetUserByUsernameAsync(username);
-        if (user == null) return NotFound();
+        var user = await _userRepository.GetUserByUsernameAsync(memberUpdateDto.UserName);
+        if (user == null) 
+            return NotFound();
         _mapper.Map(memberUpdateDto, user);
         if (await _userRepository.SaveAllAsync())
             return NoContent();

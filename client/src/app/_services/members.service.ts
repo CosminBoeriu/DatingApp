@@ -19,6 +19,8 @@ export class MembersService {
   }
 
   updateMember(member: Member){
-    return this.http.put<Member>(this.baseUrl + 'users/' + member.userName, member);
+    return this.http.put<Member>(this.baseUrl + 'users', member).subscribe({
+      next: response => console.log(response)
+    });
   }
 }

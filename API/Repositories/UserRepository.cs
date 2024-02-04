@@ -1,6 +1,8 @@
 using API.Data;
+using API.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using API.Entities;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Repositories;
@@ -8,7 +10,8 @@ namespace API.Repositories;
 public class UserRepository
 {
     private readonly DataContext _context;
-    public UserRepository(DataContext context)
+
+    public UserRepository(DataContext context, IMapper mapper)
     {
         _context = context;
     }
