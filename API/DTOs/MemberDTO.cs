@@ -23,4 +23,7 @@ public class MemberDTO
     public string Description { get; set; }
 
     public List<PhotoDTO> Photos { get; set; }
+    
+    public List<string> Likes { get; set; }
+    
 }

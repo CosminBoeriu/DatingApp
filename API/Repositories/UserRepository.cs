@@ -33,12 +33,22 @@ public class UserRepository
         var user = await _context.Users.FindAsync(id);
         return user;
     }
+    
     public async Task<AppUser> GetUserByUsernameAsync(string username)
     {
         var user = await _context.Users
             .Include(p => p.Photos)
             .SingleOrDefaultAsync(x => x.UserName == username);
         return user;
+    }
+
+    public async Task<List<AppUser>> GetLikedUsers(string username)
+    {
+        var user = await _context.Users.Include(x => x.Likes)
+            .FirstOrDefaultAsync(x => x.UserName == username);
+        if(user != null)
+            return user.Likes.ToList();
+        return new List<AppUser>();
     }
 
     public void Update(AppUser user)

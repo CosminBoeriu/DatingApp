@@ -39,6 +39,26 @@ public class UsersController : BaseApiController
         return _mapper.Map<MemberDTO>(user);
     }
 
+    [HttpGet("likes/{username}")]
+    public async Task<ActionResult<List<string>>> GetLikes(string username)
+    {
+        var liked = await _userRepository.GetLikedUsers(username);
+        return Ok(liked);
+    }
+    
+    [HttpPut("addlike")]
+    public async Task<ActionResult> AddUserLike(MemberLikesDTO memberLikesDto)
+    {
+        var user = await _userRepository.GetUserByUsernameAsync(memberLikesDto.UserName);
+        var likedUser = await _userRepository.GetUserByUsernameAsync(memberLikesDto.LikedUserName);
+        if (user == null || likedUser == null) 
+            return NotFound();
+        user.Likes.Add(likedUser);
+        if (await _userRepository.SaveAllAsync())
+            return NoContent();
+        return BadRequest("Failed to update");
+    }
+
     [HttpPut]
     public async Task<ActionResult> UpdateUser(MemberUpdateDTO memberUpdateDto)
     {
